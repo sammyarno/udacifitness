@@ -51,8 +51,8 @@ export function getMetricMetaInfo (metric) {
       displayName: 'Run',
       max: 50,
       unit: 'miles',
-      sleep: 1,
-      type: 'slippers',
+      step: 1,
+      type: 'steppers',
       getIcon() {
         return (
           <View>
