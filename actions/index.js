@@ -11,6 +11,6 @@ export function receiveEntries (entries) {
 export function addEntry (entry) {
   return {
     type: ADD_ENTRY,
-    entries,
+    entry,
   }
 }
