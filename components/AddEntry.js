@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { View, TouchableOpacity, Text } from 'react-native';
 import { getMetricMetaInfo, timeToString } from '../utils/helpers';
+import { Ionicons } from '@expo/vector-icons';
 
+import TextButton from './TextButton';
 import UdaciSteppers from './UdaciSteppers';
 import UdaciSlider from './UdaciSlider';
 import DateHeader from './DateHeader';
@@ -78,8 +80,35 @@ export default class AddEntry extends Component {
     // clear local notification
   }
 
+  reset = () => {
+    const key = timeToString()
+
+    // update redux
+
+    // route to home
+
+    // update db
+
+  }
+
   render() {
+    const { alreadyLogged } = this.props;
     const metaInfo = getMetricMetaInfo()
+
+    if (alreadyLogged) {
+      return (
+        <View>
+          <Ionicons
+            name = 'ios-happy-outline'
+            size = {100}
+          />
+          <Text>You already logged your information for today</Text>
+          <TextButton onPress={this.reset}>
+            Reset
+          </TextButton>
+        </View>
+      )
+    }
 
     return (
       <View>
