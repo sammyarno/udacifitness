@@ -8,6 +8,8 @@ import UdaciSteppers from './UdaciSteppers';
 import UdaciSlider from './UdaciSlider';
 import DateHeader from './DateHeader';
 
+import { submitEntry, removeEntry } from '../utils/api';
+
 function SubmitBtn ({ onPress }) {
   return (
     <TouchableOpacity
@@ -76,6 +78,7 @@ export default class AddEntry extends Component {
     // navigate to home
 
     // save to db
+    submitEntry({ key, entry })
 
     // clear local notification
   }
@@ -88,7 +91,7 @@ export default class AddEntry extends Component {
     // route to home
 
     // update db
-
+    removeEntry({ key })
   }
 
   render() {
