@@ -4470,7 +4470,7 @@ react-native-safe-module@^1.1.0:
   dependencies:
     dedent "^0.6.0"
 
-react-native-scripts@1.7.0:
+react-native-scripts@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/react-native-scripts/-/react-native-scripts-1.7.0.tgz#17aef327877dbc6bd7e0fca83308681941ce111a"
   dependencies:
@@ -4568,7 +4568,7 @@ react-proxy@^1.1.7:
     lodash "^4.6.1"
     react-deep-force-update "^1.0.0"
 
-react-redux@^5.0.2:
+react-redux@^5.0.2, react-redux@^5.0.6:
   version "5.0.6"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.6.tgz#23ed3a4f986359d68b5212eaaa681e60d6574946"
   dependencies:
@@ -4670,7 +4670,7 @@ redux-logger@^2.7.4:
   dependencies:
     deep-diff "0.3.4"
 
-redux@^3.6.0:
+redux@^3.6.0, redux@^3.7.2:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/redux/-/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
   dependencies:
