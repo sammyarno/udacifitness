@@ -12,9 +12,8 @@ export default function DateHeader ({date}) {
 
 const styles = StyleSheet.create({
   date: {
-    fontSize: 30,
+    fontSize: 25,
     color: purple,
-    marginTop: 15,
-    alignSelf: 'center'
+    marginTop: 15
   }
 })
