@@ -8,6 +8,7 @@ import UdaciFitnessCalendar from 'udacifitness-calendar';
 import { white } from '../utils/colors';
 import DateHeader from './DateHeader';
 import MetricCard from './MetricCard';
+import EntryDetail from './EntryDetail';
 import { AppLoading } from 'expo';
 
 class History extends Component {
@@ -41,7 +42,10 @@ class History extends Component {
               {today}
             </Text>
           </View>
-        : <TouchableOpacity onPress={() => cosole.log('Pressed !')}>
+        : <TouchableOpacity onPress={() => this.props.navigation.navigate(
+            'EntryDetail',
+            { entryId: key }
+          )}>
             <MetricCard metrics={metrics} date={formattedDate} />
           </TouchableOpacity>
       }
