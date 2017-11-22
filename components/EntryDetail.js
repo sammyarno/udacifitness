@@ -6,7 +6,7 @@ export default class EntryDetail extends Component {
     return (
       <View>
         <Text>
-          Entry Detail
+          Entry Detail - {this.props.navigation.state.params.entryId}
         </Text>
       </View>
     )
