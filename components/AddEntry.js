@@ -4,6 +4,7 @@ import { View, TouchableOpacity, Text, Platform, StyleSheet } from 'react-native
 import { getMetricMetaInfo, timeToString, getDailyReminderValue } from '../utils/helpers';
 import { Ionicons } from '@expo/vector-icons';
 import { white, purple, red } from '../utils/colors';
+import { NavigationActions } from 'react-navigation';
 
 import TextButton from './TextButton';
 import UdaciSteppers from './UdaciSteppers';
@@ -84,11 +85,20 @@ class AddEntry extends Component {
     })
 
     // navigate to home
+    this.toHome()
 
     // save to db
     submitEntry({ key, entry })
 
     // clear local notification
+  }
+
+  toHome = () => {
+    const { navigation } = this.props
+
+    navigation.dispatch(NavigationActions.back({
+      key: 'AddEntry'
+    }))
   }
 
   reset = () => {
@@ -100,6 +110,7 @@ class AddEntry extends Component {
     }))
 
     // route to home
+    this.toHome()
 
     // update db
     removeEntry({ key })
