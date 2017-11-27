@@ -50,12 +50,12 @@ class Live extends Component {
       distanceInterval: 1,
     }, ({ coords }) => {
       const newDirection = calculateDirection(coords.heading)
-      const { direction } = this.state
+      const { direction, bounceValue } = this.state
 
       this.setState(() => ({
         coords,
         status: 'granted',
-        direction: newDirection
+        direction: newDirection,
       }))
     })
   }
