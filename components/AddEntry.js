@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View, TouchableOpacity, Text, Platform, StyleSheet } from 'react-native';
-import { getMetricMetaInfo, timeToString, getDailyReminderValue } from '../utils/helpers';
+import { getMetricMetaInfo, timeToString, getDailyReminderValue, clearLocalNotification, setLocalNotification } from '../utils/helpers';
 import { Ionicons } from '@expo/vector-icons';
 import { white, purple, red } from '../utils/colors';
 import { NavigationActions } from 'react-navigation';
@@ -91,6 +91,8 @@ class AddEntry extends Component {
     submitEntry({ key, entry })
 
     // clear local notification
+    clearLocalNotification()
+      .then(setLocalNotification())
   }
 
   toHome = () => {
